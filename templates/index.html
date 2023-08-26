@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourseGenie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="chat-wrapper">
+        <div class="chat-header">
+            <h1 class="logo">
+                <img src="{{ url_for('static', filename='img/coursegenie2.png') }}" alt="CourseGenie Logo">
+                CourseGenie
+            </h1>
+        </div>
+        <div class="chat-content" id="chat-history"></div>
+        <div class="chat-footer">
+            <form id="chat-form" onsubmit="sendMessage(event)">
+                <input id="chat-input" type="text" placeholder="Type your message..." autocomplete="off" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

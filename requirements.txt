@@ -1,0 +1,4 @@
+python-dotenv
+openai
+Flask
+Flask-Dance[google]=6.2.0
